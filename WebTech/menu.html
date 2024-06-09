@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary Bean Cafe</title>
+    <link rel="icon" href="image/logo binary bean.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="Home.html"><img id="navalogo" src="image/logo binary bean.png" alt=""></a>
+        </div>
+        <div class="navbar">
+            <ul>
+                <li><a href="Home.html" class="">Home</a></li>
+                <li><a href="menu.html" class="active">Menu</a></li>
+                <li><a href="promotion.html" class="">Promotion</a></li>
+                <li><a href="about.html" class="">About Us</a></li>
+                <li><a href="contact.html" class="">Contact</a></li>
+                <li><a href="order.html" class="">Order Online</a></li>
+            </ul>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+            
+        </div>
+    </nav>
+
+    <section class="menu_page">
+        <div class="FandB">
+            <a href="menu.html" class="activemenu">Drinks</a>
+            <a href="menu4.html">Foods</a>
+        </div>
+        <div class="menu_navigation">
+            <div class="item_container">
+                <div class="item-grid-container">
+                    <div class="container1">
+                        <div class="imagecont">
+                            <p class="desc">A concentrated shot of coffee with a rich, intense flavor.</p>
+                            <img src="image/Espresso.png" alt="">
+                        </div>
+                        <div class="pricetag1">
+                            <div class="c1">
+                                <strong id="coffe">Espresso </strong><span id="price"><br>RM5.00</span>
+                            </div>
+                            <div class="c2">
+                                <button onclick="addToCart('Espresso ', 5.00)"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container1">
+                        <div class="imagecont">
+                            <p class="desc">A diluted espresso with hot water, resulting in a smooth, bold taste.</p>
+                            <img src="image/Americano.png" alt="">
+                        </div>
+                        <div class="pricetag1">
+                            <div class="c1">
+                                <strong id="coffe">Americano </strong><span id="price"><br>RM6.00</span>
+                            </div>
+                            <div class="c2">
+                                <button onclick="addToCart('Americano', 6.00)"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container1">
+                        <div class="imagecont">
+                            <p class="desc">A creamy espresso-based drink with steamed milk and a light foam layer.</p>
+                            <img src="image/Latte.png" alt="">
+                        </div>
+                        <div class="pricetag1">
+                            <div class="c1">
+                                <strong id="coffe">Latte </strong><span id="price"><br>RM8.00</span>
+                            </div>
+                            <div class="c2">
+                                <button onclick="addToCart('Latte', 8.00)"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container1">
+                        <div class="imagecont">
+                            <p class="desc">An espresso-based drink with equal parts of espresso, steamed milk, and milk foam.</p>
+                            <img src="image/Cappuccino.png" alt="">
+                        </div>
+                        <div class="pricetag1">
+                            <div class="c1">
+                                <strong id="coffe">Cappuccino </strong><span id="price"><br>RM8.50</span>
+                            </div>
+                            <div class="c2">
+                                <button onclick="addToCart('Cappuccino ', 8.50)"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container1">
+                        <div class="imagecont">
+                            <p class="desc">A delightful combination of espresso, steamed milk, and chocolate syrup, topped with whipped cream.</p>
+                            <img src="image/coffe1.png" alt="">
+                        </div>
+                        <div class="pricetag1">
+                            <div class="c1">
+                                <strong id="coffe">Mocha</strong><span id="price"><br>RM9.00</span>
+                            </div>
+                            <div class="c2">
+                                <button onclick="addToCart('Mocha', 9.00)"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container1">
+                        <div class="imagecont">
+                            <p class="desc">A shot of espresso "stained" with a dollop of frothy milk.</p>
+                            <img src="image/coffe2.png" alt="">
+                        </div>
+                        <div class="pricetag1">
+                            <div class="c1">
+                                <strong id="coffe">Macchiato </strong><span id="price"><br>RM7.50</span>
+                            </div>
+                            <div class="c2">
+                                <button onclick="addToCart('Macchiato ', 7.50)"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container1">
+                        <div class="imagecont">
+                            <p class="desc">Similar to a latte but with a higher ratio of coffee to milk, offering a stronger flavor.</p>
+                            <img src="image/coffe1.png" alt="">
+                        </div>
+                        <div class="pricetag1">
+                            <div class="c1">
+                                <strong id="coffe">Flat White</strong><span id="price"><br>RM8.50</span>
+                            </div>
+                            <div class="c2">
+                                <button onclick="addToCart('Flat White', 8.50)"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container1">
+                        <div class="imagecont">
+                            <p class="desc">A short shot of espresso made with less water, resulting in a more intense flavor.</p>
+                            <img src="image/coffe2.png" alt="">
+                        </div>
+                        <div class="pricetag1">
+                            <div class="c1">
+                                <strong id="coffe">Ristretto </strong><span id="price"><br>RM6.50</span>
+                            </div>
+                            <div class="c2">
+                                <button onclick="addToCart('Ristretto ', 6.50)"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="pagination">
+            <a href="menu.html"><</a>
+            <a href="menu.html" class="activepagin">1</a>
+            <a href="menu2.html">2</a>
+            <a href="menu3.html">3</a>
+            <a href="menu2.html">></a>
+        </div>
+        
+    </section>
+    <footer>
+        <div>
+            <img id="footlogo" src="image/logo binary bean.png" alt="">
+        </div>
+        <div class="contact-info">
+            <h1>Contact us:</h1>
+            <a href=""><img src="image/whatsapp.png" alt="whatsapplogo">+60 11 2341 8978</a><br>
+            <a href=""><img src="image/gmail (2).png" alt="gmaillogo">binarybeancafe@gmail.com</a> <br>
+            <a href=""><img src="image/google-maps (1).png" alt="mapslgo">12345,Taman Ali,JLN Abu
+                2300 Gombak,Selanggor</a>
+        </div>
+        <div class="contact-info">
+            <h1>Follow us on:</h1>
+            <p>@binarybeancafe</p>
+            <div  id="medialogo" >
+                <a href="https://www.instagram.com/hafizvdn/"><img src="image/tik-tok (1).png" alt="tiktoklogo"></a>
+                <a href="https://www.instagram.com/hafizvdn/"><img src="image/instagram (1).png" alt="instalogo"></a>
+                
+            </div>
+            <p style="font-style: italic; ">Copyright © Exceptional 2024 All rights reserved.</p>
+        </div>
+        
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>

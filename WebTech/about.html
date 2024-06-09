@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us</title>
+    <link rel="icon" href="./img-syahir/binary-bean-logo-ori.png" />
+    <script
+      src="https://kit.fontawesome.com/ec08b82533.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      :root {
+        --brown: #503c3c;
+        --cream: #d8ae7e;
+        --lightcream: #fff2d7;
+      }
+      * {
+        padding: 0;
+        margin: 0;
+        font-family: sans-serif;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      /* nav */
+      nav {
+        background-color: #fff2d7;
+        display: flex;
+        justify-content: center;
+        padding: 0.5%;
+        /* position: fixed; */
+        top: 0;
+        /* width: 100%; */
+        z-index: 1000;
+      }
+      .logo {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #navalogo {
+        width: 80px;
+      }
+      .navbar {
+        flex: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .navbar ul {
+        display: flex;
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+      }
+      .navbar li {
+        margin-left: 30px;
+      }
+      .navbar a {
+        text-decoration: none;
+        color: #000;
+        font-size: 18px;
+        transition: color 0.3s;
+      }
+      .navbar a:hover,
+      .navbar a.active {
+        color: #a0522d;
+      }
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+      }
+      .hamburger span {
+        height: 4px;
+        width: 25px;
+        background: #000;
+        margin: 4px 0;
+        transition: 0.4s;
+      }
+      @media (max-width: 860px) {
+        .navbar {
+          display: none;
+          flex-direction: column;
+          width: 100%;
+        }
+        .navbar.active {
+          display: flex;
+        }
+        .logo {
+          flex: 6;
+          display: flex;
+          justify-content: start;
+          margin-left: 10px;
+        }
+        .hamburger {
+          display: flex;
+          flex: 1;
+          flex-direction: column;
+          justify-content: center;
+        }
+        .navbar ul {
+          flex-direction: column;
+          width: 100%;
+        }
+        .navbar li {
+          margin: 10px 0;
+          text-align: center;
+        }
+        #footlogo {
+          display: none;
+        }
+      }
+      /* sec-1 */
+      .about-us-sec-1 {
+        min-height: 84vh;
+        background-color: var(--brown);
+        background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+          url(./img-syahir/coffee-bg.jpg);
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .about-us-sec-1-inside {
+        display: flex;
+        padding: 60px 150px;
+      }
+      .sec-1-inside-e {
+        width: 485px;
+      }
+      .sec-1-inside-e-title {
+        display: flex;
+        align-items: end;
+        justify-content: center;
+        margin-bottom: 5.5px;
+        transform: translateX(-23%);
+        opacity: 0;
+        transition: 0.8s;
+      }
+      .sec-1-inside-e-title img {
+        filter: drop-shadow(3.5px 3.5px black);
+      }
+      .sec-1-inside-e p:nth-child(1) {
+        font-size: 50px;
+        letter-spacing: 5px;
+        font-weight: bold;
+        text-align: center;
+        color: white;
+        text-shadow: 4px 4px black;
+        margin-right: 23px;
+      }
+      .sec-1-inside-e p:nth-child(2) {
+        font-size: 20px;
+        letter-spacing: 2px;
+        line-height: 32px;
+        text-align: justify;
+        color: white;
+      }
+      @media (max-width: 1287px) {
+        .sec-1-inside-e:nth-child(1) {
+          max-width: 970px;
+        }
+        .sec-1-inside-e:nth-child(2) {
+          width: 0;
+        }
+      }
+      @media (max-width: 810px) {
+        .about-us-sec-1-inside {
+          padding: 0;
+        }
+      }
+      /* sec-1point5 */
+      .about-us-sec-1point5 {
+        background-color: var(--brown);
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+      }
+      .about-us-sec-1point5-inside {
+        padding: 35px 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* width: 1273px; */
+      }
+      .inside-1point5-row {
+        display: flex;
+        margin: 28px 0 28px 0px;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+      }
+      .inside-1point5-row-0 {
+        margin: 28px 0 0 0;
+      }
+      .inside-1point5-row-0 p {
+        font-size: 48px;
+        font-weight: bold;
+        letter-spacing: 4px;
+        color: white;
+        text-shadow: 0px 4px black;
+      }
+      .text-highlight-2 {
+        color: var(--cream);
+      }
+      .inside-1point5-pic:nth-child(1) img,
+      .inside-1point5-pic:nth-child(3) img {
+        width: 480px;
+      }
+      .sec-1point5-img-left {
+        transition: 0.5s;
+      }
+      .shadow-left {
+        border-radius: 0 12% 0 0;
+        box-shadow: var(--brown) -28px 28px 0px -2px, var(--cream) -28px 28px;
+      }
+      .inside-1point5-row-2 .inside-1point5-pic {
+        width: 460px;
+        padding: 10px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .sec-1point5-img-right {
+        transition: 0.5s;
+      }
+      .shadow-right {
+        border-radius: 12% 0 0 0;
+        box-shadow: var(--brown) 28px 28px 0px -2px, var(--cream) 28px 28px;
+      }
+      .inside-1point5-text {
+        width: 40%;
+        /* background-color: var(--cream); */
+        padding: 15px 28px 15px 28px;
+        color: white;
+      }
+      .inside-1point5-text:nth-child(n + 2) {
+        border-left: 1px white solid;
+      }
+      .inside-1point5-text:nth-child(1) {
+        border-right: 1px white solid;
+      }
+      .inside-1point5-text p:nth-child(1) {
+        font-size: 34px;
+        letter-spacing: 3px;
+        font-weight: bold;
+        margin-bottom: 3px;
+        color: var(--cream);
+        text-shadow: 2px 2px black;
+        /* text-align: center; */
+      }
+      .inside-1point5-text p:nth-child(2) {
+        font-size: 17px;
+        letter-spacing: 1.5px;
+        line-height: 28px;
+        text-align: justify;
+      }
+      .sec-1point5-animation-right {
+        transform: translateX(-5.5%);
+        opacity: 0;
+        transition: 0.5s;
+      }
+      .sec-1point5-animation-left {
+        transform: translateX(5.5%);
+        opacity: 0;
+        transition: 0.5s;
+      }
+      .inside-1point5-row-2 .inside-1point5-text {
+        text-align: right;
+      }
+      .inside-1point5-row-2 .inside-1point5-text p:nth-child(1) {
+        text-shadow: -2px 2px black;
+      }
+      .inside-1point5-row-2 .inside-1point5-text p:nth-child(2) {
+        text-align-last: right;
+      }
+      @media (min-width: 1537px) {
+        .about-us-sec-1point5-inside {
+          max-width: 1219.2px;
+        }
+      }
+      @media (max-width: 1343px) {
+        .inside-1point5-row {
+          flex-direction: column;
+        }
+        .inside-1point5-text:nth-child(n + 2),
+        .inside-1point5-text:nth-child(1) {
+          border: none;
+        }
+        .shadow-left,
+        .shadow-right {
+          border-radius: 0%;
+          box-shadow: none;
+        }
+        .inside-1point5-row-2 {
+          flex-direction: column-reverse;
+        }
+        .inside-1point5-text,
+        .inside-1point5-text:nth-child(1) {
+          width: 480px;
+          text-align: center;
+          text-align-last: center;
+        }
+        .inside-1point5-row-2 .inside-1point5-text p:nth-child(2) {
+          text-align-last: center;
+        }
+        .inside-1point5-row-0 {
+          text-align: center;
+        }
+      }
+      @media (max-width: 860px) {
+        .about-us-sec-1point5-inside {
+          padding: 35px 0;
+        }
+      }
+      /* sec-2 */
+      .about-us-sec-2 {
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        position: relative;
+      }
+      .about-us-sec-2-pic-1 {
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+      .about-us-sec-2-pic-2 {
+        position: absolute;
+        right: 12px;
+        bottom: 0;
+      }
+      .about-us-sec-2-inside {
+        margin: 48px 120px 48px 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .inside-text-2 {
+        margin-right: 58px;
+        text-align: right;
+        z-index: 1;
+      }
+      .inside-text-2 p:nth-child(1) {
+        color: var(--cream);
+        font-size: 46px;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+        text-shadow: -1.5px 1.5px black, -2px 2px white;
+      }
+      .sec-2-text-animation {
+        transform: translateX(-8%);
+        opacity: 0;
+        transition: 0.5s;
+      }
+      .inside-text-2 p:nth-child(2) {
+        color: white;
+        font-size: 22px;
+        letter-spacing: 1px;
+        line-height: 30px;
+      }
+      .inside-map {
+        border: 1px solid var(--cream);
+        transition: 0.28s;
+        z-index: 1;
+        /* box-shadow: 12px 12px var(--cream); */
+      }
+      .inside-map:hover {
+        border: 1px solid transparent;
+        box-shadow: rgba(216, 174, 126, 0.4) 5px 5px,
+          rgba(216, 174, 126, 0.3) 10px 10px, rgba(216, 174, 126, 0.2) 15px 15px,
+          rgba(216, 174, 126, 0.1) 20px 20px,
+          rgba(216, 174, 126, 0.05) 25px 25px;
+      }
+      .inside-map iframe {
+        filter: invert(100%);
+      }
+      @media (max-width: 1308px) {
+        .about-us-sec-2-inside {
+          flex-direction: column;
+        }
+        .inside-map iframe {
+          max-width: 400px;
+        }
+        .inside-text-2 {
+          text-align: center;
+          margin-right: 0;
+          margin-bottom: 18px;
+        }
+      }
+      @media (max-width: 760px) {
+        .about-us-sec-2-pic-1 {
+          display: none;
+        }
+      }
+      /* sec-3 */
+      .about-us-sec-3 {
+        background-color: var(--brown);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+      }
+      .about-us-sec-3-inside {
+        margin: 50px 150px 50px 150px;
+        background-color: black;
+        /* border: 1px solid black; */
+        display: flex;
+        /* align-items: center; */
+        /* justify-content: center; */
+        width: 100%;
+      }
+      /*  */
+      .sec-3-col {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 100%;
+      }
+      /* text atas bawah */
+      .sec-3-row-1 p {
+        font-size: 45px;
+        font-weight: bold;
+        text-align: center;
+        color: var(--cream);
+        letter-spacing: 4.8px;
+        text-shadow: 0px 2px black, 0px 3px white;
+        /* text-shadow: white 1px 1px, white -1px 1px, var(--cream) 1px -1px,
+          var(--cream) -1px -1px; */
+        /* transform: translateY(-40px); */
+      }
+      .sec-3-row-3 p {
+        font-size: 15px;
+        text-align: center;
+        color: #404040;
+        letter-spacing: 2px;
+      }
+      /* row 2 */
+      .sec-3-row-2 {
+        display: flex;
+        justify-content: space-evenly;
+        /* space-around */
+      }
+      /* row 2 col 1 */
+      .sec-3-row-2-col-1 {
+        position: relative;
+      }
+      .sec-3-img-text {
+        position: absolute;
+        bottom: 4%;
+        right: -10%;
+        display: flex;
+        flex-direction: column;
+        color: white;
+        font-size: 16.8px;
+        line-height: 21px;
+        letter-spacing: 1.25px;
+        z-index: 1;
+      }
+      .sec-3-row-2-col-1 .sec-3-img-text {
+        font-size: 19px;
+        line-height: 24px;
+        letter-spacing: 1.5px;
+        text-align: center;
+        right: -14%;
+      }
+      .sec-3-img-text-row-1-e-2 {
+        right: -20%;
+      }
+      .sec-3-img-text-row-2-e-1 {
+        right: -26%;
+      }
+      .sec-3-img-text-row-2-e-2 {
+        right: -29%;
+      }
+      .text-highlight-3 {
+        font-weight: bold;
+        /* color: var(--cream); */
+      }
+      .text-non-highlight-3 {
+        color: #b8b8b8;
+        /* color: white; */
+      }
+      /* .sec-3-row-2-col-1-img {
+        filter: drop-shadow(-4px -4px white);
+      } */
+      /* row 2 col 2 */
+      .sec-3-row-2-col-2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-right: 48px;
+        width: 36.5%;
+      }
+      .sec-3-row-2-col-2-e {
+        display: flex;
+        justify-content: space-between;
+      }
+      .sec-3-row-2-col-2-row-e {
+        position: relative;
+      }
+      .sec-3-row-2-col-1-img {
+        transform: translateX(-10%);
+        opacity: 0;
+        transition: 0.8s;
+      }
+      .sec-3-row-2-col-2-img {
+        transform: translateY(10%);
+        opacity: 0;
+        transition: 0.8s;
+        transition-delay: 0.1s;
+      }
+      .sec-3-row-2-col-1-img,
+      .sec-3-row-2-col-2-img {
+        border-radius: 4%;
+      }
+      @media (min-width: 1537px) {
+        .about-us-sec-3 {
+          min-height: 0;
+        }
+        .about-us-sec-3-inside {
+          width: 1219.2px;
+          height: 629.6px;
+        }
+      }
+      @media (max-width: 1215px) {
+        .sec-3-row-2 {
+          flex-direction: column;
+          align-items: center;
+        }
+        .sec-3-row-2-col-2-e {
+          flex-direction: column;
+        }
+        .sec-3-row-2-col-1,
+        .sec-3-row-2-col-2-row-e {
+          margin: 18px 0;
+        }
+        .sec-3-row-2-col-2 {
+          margin-right: 0;
+          align-items: center;
+        }
+        .sec-3-row-2-col-2-row-e {
+          width: 180px;
+        }
+      }
+      @media (max-width: 910px) {
+        .sec-3-row-2-col-1-img {
+          width: 300px;
+          transform: translateY(10%);
+        }
+        .sec-3-img-text {
+          left: 50%;
+          transform: translateX(-50%);
+          align-items: center;
+          text-align: center;
+        }
+      }
+      /* footer */
+      footer {
+        background-color: #fff2d7;
+        display: flex;
+        justify-content: center;
+      }
+      .footer-inside {
+        width: 754.6px;
+        min-height: 160px;
+        display: flex;
+        justify-content: space-evenly;
+        padding: 15px;
+      }
+      .footer-inside a {
+        text-decoration: none;
+        color: var(--brown);
+      }
+      .footer-inside-1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .footer-inside-1-img img {
+        width: 100px;
+      }
+      .footer-inside-2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .footer-inside-2 i,
+      .footer-inside-3 i {
+        width: 20px;
+        font-size: 20px;
+      }
+      .footer-inside-2 p,
+      .footer-inside-3 p:nth-child(1) {
+        font-size: 18px;
+        font-weight: bold;
+      }
+      .footer-inside-3 p:nth-child(2) {
+        color: var(--brown);
+      }
+      .footer-copyright {
+        color: var(--brown);
+        font-size: 15px;
+        font-style: italic;
+      }
+      .footer-inside-3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+      }
+      /* scroll */
+      .show {
+        transform: translateX(0);
+        transform: translateY(0);
+        opacity: 1;
+      }
+      /* btn to top (last minute add) */
+      .btn-to-top-container {
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 6%;
+        width: 1230px;
+        display: flex;
+        justify-content: space-between;
+        z-index: 10000;
+      }
+      .btn-to-top {
+        display: none;
+        transition: 0.5s;
+      }
+      .btn-to-top-show {
+        display: block;
+      }
+      .btn-to-top-a {
+        text-decoration: none;
+        color: black;
+        font-size: 24px;
+        background-color: var(--lightcream);
+        padding: 15px 17px 15px 17px;
+        border-radius: 100%;
+        transition: 0.3s;
+      }
+      .btn-to-top-a:hover {
+        background-color: rgba(255, 242, 215, 0.7);
+        /* transform: translateY(100px); */
+      }
+      .btn-to-top-a-backg {
+        background-color: var(--brown);
+        color: var(--lightcream);
+      }
+      .btn-to-top-a-backg:hover {
+        background-color: rgba(80, 60, 60, 0.7);
+      }
+      @media (max-width: 1534px) {
+        .btn-to-top-container {
+          width: 80%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav id="top">
+      <div class="logo">
+        <a href=""
+          ><img
+            id="navalogo"
+            src="./img-syahir/binary-bean-logo-ori.png"
+            alt="binary-bean-logo"
+        /></a>
+      </div>
+      <div class="navbar">
+        <ul>
+          <li><a href="Home.html" class="nav-link">Home</a></li>
+          <li><a href="menu.html" class="nav-link">Menu</a></li>
+          <li><a href="promotion.html" class="nav-link">Promotion</a></li>
+          <li><a href="about.html" class="nav-link active">About Us</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="order.html" class="nav-link">Order Online</a></li>
+        </ul>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+    <div class="btn-to-top-container">
+      <div class="btn-to-top-empty"></div>
+      <div class="btn-to-top">
+        <a href="#top" class="btn-to-top-a" title="back to top"
+          ><i class="fa-solid fa-angle-up"></i
+        ></a>
+      </div>
+    </div>
+    <!-- sec-1 -->
+    <div class="about-us-sec-1">
+      <div class="about-us-sec-1-inside">
+        <div class="sec-1-inside-e">
+          <div class="sec-1-inside-e-title">
+            <p>ABOUT</p>
+            <img
+              src="./img-syahir/binary-bean-logo.png"
+              alt="binary-bean-logo"
+              width="38px"
+            />
+          </div>
+          <!-- <p>ABOUT <span class="text-highlight-1">US</span></p> -->
+          <p>
+            We're dedicated to serving exceptional coffee with a focus on
+            quality, taste, and hospitality. Our mission is simple: to provide a
+            welcoming space where you can enjoy premium coffee and genuine
+            service. From our carefully selected beans to our expertly crafted
+            brews, every cup reflects our commitment to excellence. Come join us
+            and experience the difference at Binary Bean Cafe.
+          </p>
+        </div>
+        <div class="sec-1-inside-e"></div>
+      </div>
+    </div>
+    <!-- sec-1point5 (last minute add)-->
+    <div class="about-us-sec-1point5">
+      <div class="about-us-sec-1point5-inside">
+        <div class="inside-1point5-row inside-1point5-row-0">
+          <p>GET TO KNOW <span class="text-highlight-2">US</span> BETTER</p>
+        </div>
+        <div class="inside-1point5-row inside-1point5-row-1">
+          <div class="inside-1point5-pic">
+            <img
+              class="sec-1point5-img-left"
+              src="./img-syahir/what-do-we-do.jpg"
+              alt="coffee-and-pastry"
+            />
+          </div>
+          <div class="inside-1point5-text">
+            <p class="sec-1point5-animation-right">WHAT DO WE DO</p>
+            <p class="sec-1point5-animation-right">
+              Our expert baristas craft each cup with precision and care, using
+              only the finest beans to ensure a rich and satisfying flavor. Our
+              pastry selection, baked fresh daily, includes a range of sweet and
+              savory treats perfect for any time of day. Whether you're grabbing
+              a quick breakfast, enjoying a leisurely coffee break, or meeting
+              friends, we offer a cozy space to relax.
+            </p>
+          </div>
+        </div>
+        <div class="inside-1point5-row inside-1point5-row-2">
+          <div class="inside-1point5-text">
+            <p class="sec-1point5-animation-left">TRUST ME, IT'S HALAL</p>
+            <p class="sec-1point5-animation-left">
+              We are proud to offer a menu that's halal-certified. Our
+              commitment to quality extends to ensuring that our ingredients
+              meet halal standards, providing our customers with peace of mind
+              and delicious, ethically prepared food and beverages. We take
+              great care in sourcing our products to maintain the highest
+              standards of purity and compliance.
+            </p>
+          </div>
+          <div class="inside-1point5-pic sec-1point5-img-right">
+            <img
+              src="./img-syahir/halal-certificate.png"
+              alt="halal-certificate"
+              width="80px"
+            />
+            <img
+              src="./img-syahir/coffee.png"
+              alt="coffee-halal"
+              width="240px"
+            />
+          </div>
+        </div>
+        <div class="inside-1point5-row inside-1point5-row-3">
+          <div class="inside-1point5-pic">
+            <img
+              class="sec-1point5-img-left"
+              src="./img-syahir/since-18.png"
+              alt="more-coffee-pic-hehe"
+            />
+          </div>
+          <div class="inside-1point5-text">
+            <p class="sec-1point5-animation-right">SINCE '18</p>
+            <p class="sec-1point5-animation-right">
+              Since opening our doors in 2018, Binary Bean Cafe has been a
+              beloved part of the community. Our journey began with a simple
+              mission: to create a space where people can come together to enjoy
+              great coffee and pastries. Over the years, we've grown and
+              evolved, but our dedication to quality and customer service
+              remains unchanged.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- sec-2 -->
+    <div class="about-us-sec-2">
+      <div class="about-us-sec-2-pic-1">
+        <img
+          src="./img-syahir/coffee-beans-1.png"
+          alt="coffee-beans-1"
+          width="325px"
+        />
+      </div>
+      <div class="about-us-sec-2-pic-2">
+        <img
+          src="./img-syahir/coffee-beans-2.png"
+          alt="coffee-beans-2"
+          width="77px"
+        />
+      </div>
+      <div class="about-us-sec-2-inside">
+        <div class="inside-text-2">
+          <p class="sec-2-text-animation">LOCATE US AT</p>
+          <p>Cafe Mahallah Ali, Mahallah Ali, IIUM,<br />53100 Kuala Lumpur</p>
+        </div>
+        <div class="inside-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d995.8526485228015!2d101.73687057571242!3d3.2476647081375885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc38e9bb77f819%3A0x5c2058733b8d90f1!2sMahallah%20Ali%20Abi%20Talib!5e0!3m2!1sen!2smy!4v1715521200848!5m2!1sen!2smy"
+            width="600"
+            height="300"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+    <!-- sec-3 -->
+    <div class="about-us-sec-3">
+      <div class="about-us-sec-3-inside">
+        <div class="sec-3-col">
+          <div class="sec-3-col-e sec-3-row-1"><p>ORGANISATION</p></div>
+          <div class="sec-3-col-e sec-3-row-2">
+            <div class="sec-3-row-2-e sec-3-row-2-col-1">
+              <img
+                class="sec-3-row-2-col-1-img"
+                src="./img-syahir/iman.png"
+                alt="Iman"
+                width="390px"
+              />
+              <div class="sec-3-img-text">
+                <img
+                  src="./img-syahir/signature.png"
+                  alt="Iman-Signature"
+                  width="110px"
+                />
+                <p>
+                  <span class="text-highlight-3">Q. Iman</span> <br /><span
+                    class="text-non-highlight-3"
+                    >Founder</span
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="sec-3-row-2-e sec-3-row-2-col-2">
+              <div class="sec-3-row-2-col-2-e sec-3-row-2-col-2-row-1">
+                <div class="sec-3-row-2-col-2-row-e">
+                  <img
+                    class="sec-3-row-2-col-2-img"
+                    src="./img-syahir/hafiz.png"
+                    alt="Hafiz"
+                    width="180px"
+                  />
+                  <div class="sec-3-img-text sec-3-img-text-row-1-e-1">
+                    <p>
+                      <span class="text-highlight-3">Hafiz</span> <br /><span
+                        class="text-non-highlight-3"
+                        >CEO</span
+                      >
+                    </p>
+                  </div>
+                </div>
+                <div class="sec-3-row-2-col-2-row-e">
+                  <img
+                    class="sec-3-row-2-col-2-img"
+                    src="./img-syahir/wafiq.png"
+                    alt="Wafiq"
+                    width="180px"
+                  />
+                  <div class="sec-3-img-text sec-3-img-text-row-1-e-2">
+                    <p>
+                      <span class="text-highlight-3">Wafiq</span> <br /><span
+                        class="text-non-highlight-3"
+                        >Manager</span
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="sec-3-row-2-col-2-e sec-3-row-2-col-2-row-2">
+                <div class="sec-3-row-2-col-2-row-e">
+                  <img
+                    class="sec-3-row-2-col-2-img"
+                    src="./img-syahir/syahir.png"
+                    alt="Syahir"
+                    width="180px"
+                  />
+                  <div class="sec-3-img-text sec-3-img-text-row-2-e-1">
+                    <p>
+                      <span class="text-highlight-3">Syahir</span>
+                      <br /><span class="text-non-highlight-3">Supervisor</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="sec-3-row-2-col-2-row-e">
+                  <img
+                    class="sec-3-row-2-col-2-img"
+                    src="./img-syahir/ammar.png"
+                    alt="Ammar"
+                    width="180px"
+                  />
+                  <div class="sec-3-img-text sec-3-img-text-row-2-e-2">
+                    <p>
+                      <span class="text-highlight-3">Ammar</span> <br /><span
+                        class="text-non-highlight-3"
+                        >Main Barista</span
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sec-3-col-e sec-3-row-3">
+            <p>Made from scratch - 0% ChatGPT - by Syahir.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-inside">
+        <div class="footer-inside-1">
+          <div class="footer-inside-1-img">
+            <img
+              src="./img-syahir/binary-bean-logo-ori.png"
+              alt="binar-bean-logo"
+            />
+          </div>
+        </div>
+        <div class="footer-inside-2">
+          <p>Contact us:</p>
+          <a href="#"><i class="fa-brands fa-whatsapp"></i> +011 2341 8978</a
+          ><a href="#">
+            <i class="fa-regular fa-envelope"></i> binarybeancafe@gmail.com </a
+          ><a href="#">
+            <i class="fa-solid fa-location-dot"></i> Cafe Mahallah Ali, Mahallah
+            Ali, IIUM,<br />53100 Kuala Lumpur
+          </a>
+        </div>
+        <div class="footer-inside-3">
+          <p>Follow us on:</p>
+          <p>@binarybeancafe</p>
+          <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <p class="footer-copyright">
+            Copyright © Exceptional<br />2024 All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script defer>
+      const sectionOneTitle = document.querySelector(".sec-1-inside-e-title");
+
+      // main observer - just for transform & opacity
+      const observerMain = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            entry.target.classList.toggle("show", entry.isIntersecting);
+          });
+        },
+        {
+          threshold: 0.5,
+        }
+      );
+
+      observerMain.observe(sectionOneTitle);
+
+      const secOnePointFiveTextRight = document.querySelectorAll(
+        ".sec-1point5-animation-right"
+      );
+
+      const secOnePointFiveTextLeft = document.querySelectorAll(
+        ".sec-1point5-animation-left"
+      );
+
+      // main observer V2 - but for sec 1point5 with lower threshold
+      const observerSecOnePointFive = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            entry.target.classList.toggle("show", entry.isIntersecting);
+          });
+        },
+        {
+          threshold: 0.1,
+        }
+      );
+
+      secOnePointFiveTextRight.forEach((x) => {
+        observerSecOnePointFive.observe(x);
+      });
+
+      secOnePointFiveTextLeft.forEach((x) => {
+        observerSecOnePointFive.observe(x);
+      });
+
+      const secOnePointFiveImgLeft = document.querySelectorAll(
+        ".sec-1point5-img-left"
+      );
+
+      // observer for sec 1point5 img left
+      const observerSecOnePointFiveImgLeft = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            entry.target.classList.toggle("shadow-left", entry.isIntersecting);
+            if (entry.isIntersecting)
+              observerSecOnePointFiveImgLeft.unobserve(entry.target);
+          });
+        },
+        {
+          threshold: 1,
+        }
+      );
+
+      secOnePointFiveImgLeft.forEach((x) => {
+        observerSecOnePointFiveImgLeft.observe(x);
+      });
+
+      const secOnePointFiveImgRight = document.querySelector(
+        ".sec-1point5-img-right"
+      );
+
+      // observer for sec 1point5 img right
+      const observerSecOnePointFiveImgRight = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            entry.target.classList.toggle("shadow-right", entry.isIntersecting);
+            if (entry.isIntersecting)
+              observerSecOnePointFiveImgRight.unobserve(entry.target);
+          });
+        },
+        {
+          threshold: 1,
+        }
+      );
+
+      observerSecOnePointFiveImgRight.observe(secOnePointFiveImgRight);
+
+      // observe section 2 (title)
+      const sectionTwoTitle = document.querySelector(".sec-2-text-animation");
+      observerMain.observe(sectionTwoTitle);
+
+      // observe section 3 (img left & right)
+      const sectionThreeImgLeft = document.querySelector(
+        ".sec-3-row-2-col-1-img"
+      );
+      observerMain.observe(sectionThreeImgLeft);
+
+      const sectionThreeImgRight = document.querySelectorAll(
+        ".sec-3-row-2-col-2-img"
+      );
+      sectionThreeImgRight.forEach((x) => {
+        observerMain.observe(x);
+      });
+
+      // btn to top show & background
+      const btnToTop = document.querySelector(".btn-to-top");
+      const btnToTopLink = document.querySelector(".btn-to-top-a");
+      window.addEventListener("scroll", () => {
+        const scrollListener = window.scrollY;
+        if (scrollListener > 95) {
+          btnToTop.classList.add("btn-to-top-show");
+          if (scrollListener >= 2586) {
+            btnToTopLink.classList.add("btn-to-top-a-backg");
+          } else {
+            btnToTopLink.classList.remove("btn-to-top-a-backg");
+          }
+        } else {
+          btnToTop.classList.remove("btn-to-top-show");
+        }
+      });
+
+      // hamburger
+      const hamburger = document.getElementById("hamburger");
+      const navbar = document.querySelector(".navbar");
+
+      hamburger.addEventListener("click", () => {
+        navbar.classList.toggle("active");
+        hamburger.classList.toggle("toggle");
+      });
+    </script>
+  </body>
+</html>

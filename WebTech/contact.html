@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <link rel="icon" href="./img-syahir/binary-bean-logo-ori.png" />
+    <script
+      src="https://kit.fontawesome.com/ec08b82533.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      :root {
+        --brown: #503c3c;
+        --cream: #d8ae7e;
+        --lightcream: #fff2d7;
+      }
+      * {
+        padding: 0;
+        margin: 0;
+        font-family: sans-serif;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      /* nav */
+      nav {
+        background-color: #fff2d7;
+        display: flex;
+        justify-content: center;
+        padding: 0.5%;
+        /* position: fixed; */
+        top: 0;
+        /* width: 100%; */
+        z-index: 1000;
+      }
+      .logo {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #navalogo {
+        width: 80px;
+      }
+      .navbar {
+        flex: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .navbar ul {
+        display: flex;
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+      }
+      .navbar li {
+        margin-left: 30px;
+      }
+      .navbar a {
+        text-decoration: none;
+        color: #000;
+        font-size: 18px;
+        transition: color 0.3s;
+      }
+      .navbar a:hover,
+      .navbar a.active {
+        color: #a0522d;
+      }
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+      }
+      .hamburger span {
+        height: 4px;
+        width: 25px;
+        background: #000;
+        margin: 4px 0;
+        transition: 0.4s;
+      }
+      @media (max-width: 860px) {
+        .navbar {
+          display: none;
+          flex-direction: column;
+          width: 100%;
+        }
+        .navbar.active {
+          display: flex;
+        }
+        .logo {
+          flex: 6;
+          display: flex;
+          justify-content: start;
+          margin-left: 10px;
+        }
+        .hamburger {
+          display: flex;
+          flex: 1;
+          flex-direction: column;
+          justify-content: center;
+        }
+        .navbar ul {
+          flex-direction: column;
+          width: 100%;
+        }
+        .navbar li {
+          margin: 10px 0;
+          text-align: center;
+        }
+        #footlogo {
+          display: none;
+        }
+      }
+      /* content */
+      .contact-us {
+        min-height: 100vh;
+        background-color: var(--brown);
+        display: flex;
+        justify-content: center;
+      }
+      .contact-us-inside {
+        display: flex;
+        margin: 50px 150px 50px 150px;
+        background-color: var(--cream);
+        border-radius: 12px;
+        box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+          rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+        position: relative;
+      }
+      .cu-img-pin {
+        position: absolute;
+        /* right: -15px;
+        top: -10px; */
+        top: 4px;
+        right: 10px;
+      }
+      .e-info {
+        padding: 50px 98px 50px 50px;
+        margin: 10px 0 10px 10px;
+        background-color: #000;
+        color: white;
+        border-radius: 12px 0 0 12px;
+        display: flex;
+        flex-direction: column;
+        width: 282.8px;
+        position: relative;
+      }
+      .cu-img-coffee {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
+      .title {
+        flex: 1.3;
+        font-size: 40px;
+        font-weight: bold;
+        letter-spacing: 1.3px;
+        /* margin-bottom: 18px; */
+        z-index: 1;
+        transform: translateX(-20px);
+        opacity: 0;
+        transition: 0.8s;
+      }
+      .show {
+        transform: translate(0);
+        opacity: 1;
+      }
+      .subtitle {
+        flex: 1.5;
+        /* font-size: 18px; */
+        letter-spacing: 1px;
+        /* margin-bottom: 68px; */
+        z-index: 1;
+      }
+      .e-info-row {
+        flex: 3.5;
+        display: flex;
+        justify-content: space-between;
+        /* height: 100%; */
+        z-index: 1;
+      }
+      .e-info-row-col {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+      }
+      .e-info-row-col-symbol {
+        padding-bottom: 18px;
+        align-items: center;
+      }
+      .e-info-row-col-text {
+        width: 88%;
+      }
+      .e-info-row-col a {
+        color: white;
+        text-decoration: none;
+      }
+      .e-info-empty {
+        flex: 4.5;
+      }
+      .e-form {
+        padding: 50px;
+        width: 500px;
+      }
+      form {
+        height: 88%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .e-form-col-row-1 {
+        display: flex;
+        justify-content: space-between;
+      }
+      .e-form-col-row-1-col {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 160px;
+      }
+      .e-form-col-row-1-col input {
+        width: 230px;
+        border: none;
+        background-color: transparent;
+        border-bottom: 1px solid #000;
+      }
+      .e-form-col-row-2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 70px;
+      }
+      .e-form-col-row-2-row {
+        display: flex;
+        justify-content: space-between;
+      }
+      .e-form-col-row-2-row-col {
+        display: flex;
+        align-items: center;
+      }
+      .e-form-col-row-2-row-col input {
+        /* border: none;
+        background-color: #d3d3d3; */
+        margin-right: 10px;
+        accent-color: #000;
+      }
+      .e-form-col-row-3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 55px;
+      }
+      .e-form-col-row-3 input {
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid #000;
+      }
+      .e-form-col-row-4 {
+        align-self: end;
+      }
+      .e-form-col-row-4 button {
+        padding: 15px 38px 15px 38px;
+        border: none;
+        background-color: black;
+        font-size: 16px;
+        color: white;
+        font-weight: bold;
+        /* border-radius: 8px; */
+        outline: none;
+        position: relative;
+        cursor: pointer;
+        transition: 0.5s;
+      }
+      .e-form-col-row-4 button::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 2px;
+        background-color: white;
+        transform: scaleX(0);
+        transition: 0.5s;
+      }
+      .e-form-col-row-4 button:hover::before,
+      .e-form-col-row-4 button:focus::before {
+        transform: scaleX(1);
+      }
+      /* .e-form-col-row-4 button:hover {
+        background-color: #303030;
+      } */
+      .highlight,
+      .e-form-col-row-1 label,
+      .e-form-col-row-3 label {
+        font-weight: bold;
+      }
+      .margin-top {
+        margin-top: 24px;
+      }
+      .e-form-col-row-1-col input,
+      .e-form-col-row-3 input {
+        outline: 0;
+      }
+      @media (min-width: 1537px) {
+        .contact-us-inside {
+          height: 629.6px;
+        }
+        .contact-us {
+          min-height: calc(100vh - 88.906px - 190px);
+        }
+      }
+      /* footer */
+      footer {
+        background-color: #fff2d7;
+        display: flex;
+        justify-content: center;
+      }
+      .footer-inside {
+        width: 754.6px;
+        min-height: 160px;
+        display: flex;
+        justify-content: space-evenly;
+        padding: 15px;
+      }
+      .footer-inside a {
+        text-decoration: none;
+        color: var(--brown);
+      }
+      .footer-inside-1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .footer-inside-1-img img {
+        width: 100px;
+      }
+      .footer-inside-2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .footer-inside-2 i,
+      .footer-inside-3 i {
+        width: 20px;
+        font-size: 20px;
+      }
+      .footer-inside-2 p,
+      .footer-inside-3 p:nth-child(1) {
+        font-size: 18px;
+        font-weight: bold;
+      }
+      .footer-inside-3 p:nth-child(2) {
+        color: var(--brown);
+      }
+      .footer-copyright {
+        color: var(--brown);
+        font-size: 15px;
+        font-style: italic;
+      }
+      .footer-inside-3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav>
+      <div class="logo">
+        <a href=""
+          ><img
+            id="navalogo"
+            src="./img-syahir/binary-bean-logo-ori.png"
+            alt="binary-bean-logo"
+        /></a>
+      </div>
+      <div class="navbar">
+        <ul>
+          <li><a href="Home.html" class="nav-link">Home</a></li>
+          <li><a href="menu.html" class="nav-link">Menu</a></li>
+          <li><a href="promotion.html" class="nav-link">Promotion</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="contact.html" class="nav-link active">Contact</a></li>
+          <li><a href="order.html" class="nav-link">Order Online</a></li>
+        </ul>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+    <!-- CONTENT -->
+    <div class="contact-us">
+      <div class="contact-us-inside">
+        <img
+          src="./img-syahir/cu-pin.png"
+          alt="pin"
+          width="80px"
+          class="cu-img-pin"
+        />
+        <div class="contact-us-inside-e e-info">
+          <p class="title">Contact Us</p>
+          <p class="subtitle">How can we assist you today?</p>
+          <div class="e-info-row">
+            <div class="e-info-row-col e-info-row-col-symbol">
+              <a href="#"><i class="fa-brands fa-whatsapp"></i></a
+              ><a href="#"><i class="fa-regular fa-envelope"></i></a
+              ><a href="#"><i class="fa-solid fa-location-dot"></i></a>
+            </div>
+            <div class="e-info-row-col e-info-row-col-text">
+              <a href="#">+011 2341 8978</a
+              ><a href="#">binarybeancafe@gmail.com</a
+              ><a href="#"
+                >Cafe Mahallah Ali, Mahallah Ali, IIUM, 53100 Kuala Lumpur</a
+              >
+            </div>
+          </div>
+          <div class="e-info-empty"></div>
+          <img
+            src="./img-syahir/cu-coffee.png"
+            alt="coffee"
+            width="320px"
+            class="cu-img-coffee"
+          />
+        </div>
+        <div class="contact-us-inside-e e-form">
+          <form action="#">
+            <!-- <div class="e-form-col"> -->
+            <div class="e-form-col-row e-form-col-row-1">
+              <div class="e-form-col-row-1-col">
+                <label for="First Name">First Name</label>
+                <input type="text" />
+                <label class="margin-top" for="Email">Email</label>
+                <input type="email" name="Email" id="Email" required />
+              </div>
+              <div class="e-form-col-row-1-col">
+                <label for="Last Name">Last Name</label>
+                <input type="text" />
+                <label class="margin-top" for="Phone Number"
+                  >Phone Number</label
+                >
+                <input type="text" />
+              </div>
+            </div>
+            <div class="e-form-col-row e-form-col-row-2">
+              <p class="highlight">Subject</p>
+              <div class="e-form-col-row-2-row">
+                <div class="e-form-col-row-2-row-col">
+                  <input type="checkbox" name="c1" id="c1" />
+                  <label for="checkbox">Product <br />Feedback</label>
+                </div>
+                <div class="e-form-col-row-2-row-col">
+                  <input type="checkbox" name="c2" id="c2" />
+                  <label for="checkbox">Customer <br />Feedback</label>
+                </div>
+                <div class="e-form-col-row-2-row-col">
+                  <input type="checkbox" name="c3" id="c3" />
+                  <label for="checkbox">Service <br />Experience</label>
+                </div>
+                <div class="e-form-col-row-2-row-col">
+                  <input type="checkbox" name="c3" id="c3" />
+                  <label for="checkbox">Others</label>
+                </div>
+              </div>
+            </div>
+            <div class="e-form-col-row e-form-col-row-3">
+              <label for="message">Message</label
+              ><input
+                type="text"
+                name="message"
+                id="message"
+                placeholder="Write your message.."
+                required
+              />
+            </div>
+            <div class="e-form-col-row e-form-col-row-4">
+              <button type="submit">Submit</button>
+            </div>
+            <!-- </div> -->
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-inside">
+        <div class="footer-inside-1">
+          <div class="footer-inside-1-img">
+            <img
+              src="./img-syahir/binary-bean-logo-ori.png"
+              alt="binar-bean-logo"
+            />
+          </div>
+        </div>
+        <div class="footer-inside-2">
+          <p>Contact us:</p>
+          <a href="#"><i class="fa-brands fa-whatsapp"></i> +011 2341 8978</a
+          ><a href="#">
+            <i class="fa-regular fa-envelope"></i> binarybeancafe@gmail.com </a
+          ><a href="#">
+            <i class="fa-solid fa-location-dot"></i> Cafe Mahallah Ali, Mahallah
+            Ali, IIUM,<br />53100 Kuala Lumpur
+          </a>
+        </div>
+        <div class="footer-inside-3">
+          <p>Follow us on:</p>
+          <p>@binarybeancafe</p>
+          <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <p class="footer-copyright">
+            Copyright © Exceptional<br />2024 All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script defer>
+      const contactUsTitle = document.querySelector(".title");
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            entry.target.classList.toggle("show", entry.isIntersecting);
+            if (entry.isIntersecting) {
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          threshold: 0.1,
+        }
+      );
+
+      observer.observe(contactUsTitle);
+
+      // hamburger
+      const hamburger = document.getElementById("hamburger");
+      const navbar = document.querySelector(".navbar");
+
+      hamburger.addEventListener("click", () => {
+        navbar.classList.toggle("active");
+        hamburger.classList.toggle("toggle");
+      });
+    </script>
+  </body>
+</html>
